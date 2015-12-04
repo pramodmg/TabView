@@ -22,7 +22,7 @@ var TabView = React.createClass({
         onPress: PropTypes.func,
         renderTitle: PropTypes.func,
         titles: PropTypes.array,
-        index: PropTypes.number,
+        indexNumber: PropTypes.number,
         barColor: PropTypes.string,
         barPosition: PropTypes.string,
         underlayColor: PropTypes.string,
@@ -36,7 +36,7 @@ var TabView = React.createClass({
             onTransitionStart: ()=>{},
             onPress: ()=>{},
             renderTitle: null,
-            index: 0,
+            indexNumber: 0,
             barColor: '#000',
             barPosition:'top',
             underlayColor: '#111',
@@ -52,11 +52,11 @@ var TabView = React.createClass({
     },
 
     componentDidMount() {
-        setTimeout(() => this.moveTo(this.props.index), 0);
+        setTimeout(() => this.moveTo(this.props.indexNumber), 0);
     },
 
     componentWillReceiveProps(nextProps) {
-        this.moveTo(nextProps.index);
+        this.moveTo(nextProps.indexNumber);
     },
 
     measureHandler(x, y, width) {
@@ -78,7 +78,7 @@ var TabView = React.createClass({
     _renderTitle(title, i) {
         return (
             <View style={styles.title}>
-                <Text style={[this.props.titleStyle, i === this.props.index && this.props.selectedTitleStyle]}>{title}</Text>
+                <Text style={[this.props.titleStyle, i === this.props.indexNumber && this.props.selectedTitleStyle]}>{title}</Text>
             </View>
         );
     },
