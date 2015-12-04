@@ -1,5 +1,7 @@
 # TabView
 
+Tab View example using react-native.
+
 # ScreenShot
 
 ![alt tag](https://github.com/pramodmg/TabView/blob/master/ScreenShot.jpg)
