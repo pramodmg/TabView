@@ -4,7 +4,9 @@
 
 ![alt tag](https://github.com/pramodmg/TabView/blob/master/ScreenShot.jpg)
 
+
 The code is basically a Simple illustration of how to use the Tabbed View inside the Reat-Native.
+
 
 ```
  /* @flow */
@@ -51,3 +53,7 @@ var styles = StyleSheet.create({
 
 module.exports = Component;
 ```
+
+Before using this please do install react-tween-state. Since there is a dependency on it.
+
+currently the verion number of this code is 1.0
